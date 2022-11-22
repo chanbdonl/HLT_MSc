@@ -31,6 +31,8 @@ def weird_request(seq):
 
 def main():
 
+	print("##########################  Unit 1 Tests  ##########################")
+
 	#Assert that code in multiply() passes test cases
 	if multiply(2,2) == 4:
 		print("Test case 1 for multiply() Passed: (2x2 = 4)")
