@@ -45,7 +45,7 @@ def main():
 		print("Test case 2 for multiply() Failed. Multiplication error.")
 
 	if multiply(-1,-1) == 1:
-		print("Test case 3 for multiply() Passed: (2x2 = 4) \n")
+		print("Test case 3 for multiply() Passed: (-1x-1 = 1) \n")
 	else:
 		print("Test case 3 for multiply() Failed Multiplication error. \n")
 
