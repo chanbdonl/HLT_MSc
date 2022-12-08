@@ -1,5 +1,3 @@
-from typing import Tuple, Sequence, Text, Optional
-
 """
 Unit 2 code from LING 529 Human Language Technology I
 Course taught by Dr. Gus Hahn-Powell
@@ -13,7 +11,7 @@ In unit 2 we implimented a naive and incomplete rule-based sysem for POS tagging
 This document includes code written by Channing Donaldson with function frameworks provided by Dr. Hahn-Powell.
 """
 
-
+from typing import Tuple, Sequence, Text, Optional
 
 #The following class is writen by Dr. Hahn-Powell which keeps track of tokens and their attributes
 class Sentence:

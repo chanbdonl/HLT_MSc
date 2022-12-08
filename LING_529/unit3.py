@@ -17,28 +17,49 @@ This document includes code written by Channing Donaldson with function framewor
 
 #The following class is writen by Dr. Hahn-Powell which keeps track of tokens and their attributes
 
-	#The following portion references code written by Dr. Hahn-Powell which creates a solid state machine image using graphviz, but was edited by Channing
+	#The following portion references code written by Dr. Hahn-Powell which creates a solid state machine image using DOT & graphviz
+
+# Source(
+# """
+# digraph abc_lang {
+#     rankdir=LR;
+#     size="8,5"
+
+#     node [shape = circle, label="S", fontsize=14] S;
+#     node [shape = circle, label="q1", fontsize=12] q1;
+#     node [shape = circle, label="q2", fontsize=12] q2;
+#     node [shape = doublecircle, label="q3", fontsize=12] q3;
+
+#     //node [shape = point ]; qi
+#     //qi -> S;
+#     S  -> q1 [ label = "a" ];
+#     q1 -> q2 [ label = "b" ];
+#     q2 -> q2 [ label = "b" ];
+#     q2 -> q3 [ label = "c" ];
+# }
+# """
+# )
 
 
-s2 = """
-digraph abc_v2_lang {
-	rankdir=LR;
-	size="8,5"
+# s2 = """
+# digraph abc_v2_lang {
+# 	rankdir=LR;
+# 	size="8,5"
 
-	node [shape = circle, label="S", fontsize=14] S;
-	node [shape = circle, label="q1", fontsize=12] q1;
-	node [shape = circle, label="q2", fontsize=12] q2;
-	node [shape = doublecircle, label="q3", fontsize=12] q3;
+# 	node [shape = circle, label="S", fontsize=14] S;
+# 	node [shape = circle, label="q1", fontsize=12] q1;
+# 	node [shape = circle, label="q2", fontsize=12] q2;
+# 	node [shape = doublecircle, label="q3", fontsize=12] q3;
 
-	//node [shape = point ]; qi
-	//qi -> S;
-	S  -> q1 [ label = "a" ];
-	S  -> q2 [ label = "b" ];
-	q1 -> q2 [ label = "b" ];
-	q2 -> q2 [ label = "b" ];
-	q2 -> q3 [ label = "c" ];
-}
-"""
+# 	//node [shape = point ]; qi
+# 	//qi -> S;
+# 	S  -> q1 [ label = "a" ];
+# 	S  -> q2 [ label = "b" ];
+# 	q1 -> q2 [ label = "b" ];
+# 	q2 -> q2 [ label = "b" ];
+# 	q2 -> q3 [ label = "c" ];
+# }
+# """
 
 	#End of code written by Hahn-Powell
 
@@ -251,10 +272,6 @@ def main():
 	else:
 		print("Test case 4 for abc_lang_matcher() Failed.\n")
 
-	s1_path = '/home/channing/HLT_MSc/LING_529/Source.gv'
-	s1 = Source.from_file(s1_path)
-	s1.view()
-
 	#Assert that code in abc_v2_lang_matcher() passes test cases
 	if abc_v2_lang_matcher("ac")   == False:
 		print("Test case 1 for abc_v2_lang_matcher() Passed.")
@@ -296,7 +313,9 @@ def main():
 	else:
 		print("Test case 8 for abc_v2_lang_matcher() Failed. \n")
 	s2.view()
+
 	print("\n")
+	
 	#Assert that code in tokenize_on_whitespace() passes test cases
 	if tokenize_on_whitespace("The name of the wind.") == ["The", "name", "of", "the", "wind."]:
 		print("Test case 1 for tokenize_on_whitespace() Passed.")
