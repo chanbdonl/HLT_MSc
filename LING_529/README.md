@@ -2,6 +2,11 @@
 
 This folder contains all course work from LING 529 "Human Language Technology I" taught by Dr. Gus Hahn-Powell at the University of Arizona during the Fall 2021 semester.
 
+###Course Description
+>This class serves as an introduction to human language technology (HLT), an emerging interdisciplinary field that encompasses most subdisciplines of linguistics, as well as computational linguistics, natural language processing, computer science, artificial intelligence, psychology, philsophy, mathematics, statistics. Content includes a combination of theoretical and applied topics such as (but not limited to) tokenization across languages, n-grams, word representation, basic probability theory, introductory programming, and verison control.
+
+
+
 ## Unit 1
 
 This unit covers basic python programming tasks in mutliply and reversing a list, dropping an element and returning the remainder.
