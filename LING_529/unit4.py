@@ -434,7 +434,10 @@ def main():
 
     for feat in new_features:
         v4.add_feature(feat)
-        ids.add(v4.id_for(feat)) 
+        ids.add(v4.id_for(feat))
+
+    n1 = ngrams(n=1, tokens=["Good"], use_start_end=False)
+    n2 = 
 
 
 
@@ -499,6 +502,11 @@ def main():
         print("Test case 11 for v4 = Vocabulary() Passed. len(ids) == len(set(new_features)) + 1 ")
     else:
         print("Test case 11 for v4 = Vocabulary() Failed.")
+
+    if ngrams(n=1, tokens=["Good"], use_start_end=False) == [('Good',)]:
+        print("Test case 12 for ngrams() Passed. ngrams(n=1, tokens=[\"Good\"], use_start_end=False) == [('Good',)]")
+    else:
+        print("Test case 12 for ngrams() Failed.")
 
 if __name__ == "__main__":
 	main()

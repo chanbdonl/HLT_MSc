@@ -363,12 +363,14 @@ class LanguageModel():
 
 def main():
 
-print("##########################Unit 5 Tests##########################")
+    print("##########################Unit 5 Tests##########################")
 
     print("\n")
     #Assert that code in array_of_zeros passes test cases
     
     res1 = array_of_zeros(3)
+    res2 = add_scalar(array_of_zeros(7), 34)
+    res3 = add_scalar(array_of_zeros(4), 2)
 
     if type(res1) == np.ndarray:
         print("Test case 1 for array_of_zeros Passed. This array is of type np.ndarray.")
@@ -392,6 +394,10 @@ print("##########################Unit 5 Tests##########################")
 
     print("\n")
 
+    if type(res2) == np.array:
+        print("Test case 1 for add_scalar Passed. The array type is ndarray.")
+    else:
+        print("Test case 1 for add_scalar Failed. The array type is not ndarray")
 
 
 if __name__ == "__main__":
